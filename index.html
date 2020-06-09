@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    <div class="preloader" id="page-preloader">
+        <div class="loader"></div>
+    </div>
     <header>
         <div class="row col-12">
             <div class="container">
@@ -46,13 +49,13 @@
                 <div class="middle">
                     <div class="offer">
                         <h1 class="col-xl-6 col-lg-4 col-12 header">Доставка бетона по Копивницкому </h1>
-                        <div class="description col-xl-6 col-8">
+                        <div class="description col-xl-6 col-md-8 col-10">
                             Доставим по Кропивницкому - любую кубатуру без задержек.
                             Заявки на доставку принимаем за один день.
                         </div>
-                        <button class="order col-xl-3 col-lg-3"><a href="#form">Заказать</a></button>
+                        <a class="order col-xl-2 col-lg-2" href="#form">Заказать</a>
                     </div>
-                    
+
                 </div>
                 <div class="img">
                     <img class="img_right" src="assets/img/Img_right.png" alt="">
@@ -72,7 +75,7 @@
 
                 <div class="cards container">
                     <div class="row" style="justify-content: space-around;">
-                        <div class="card col-4">
+                        <div class="card col-12 col-lg-4">
                             <div class="card-body">
                                 <h5 class="card-title">Бетон М100 (В7,5) С6/7,5 П3</h5>
                                 <p class="card-text">Бетон М-100 это самая низкая марка бетона, используется в основном
@@ -80,7 +83,7 @@
                                     подготовительных работ, выравнивания</p>
                             </div>
                         </div>
-                        <div class="card col-4">
+                        <div class="card col-12 col-lg-4">
                             <div class="card-body">
                                 <h5 class="card-title">Бетон М150 (В10;В12,5) С8/10 П4</h5>
                                 <p class="card-text">Бетон М-100 это самая низкая марка бетона, используется в основном
@@ -88,7 +91,7 @@
                                     подготовительных работ, выравнивания</p>
                             </div>
                         </div>
-                        <div class="card col-4">
+                        <div class="card col-12 col-lg-4">
                             <div class="card-body">
                                 <h5 class="card-title">Бетон М200 (В15) С12/15 П4</h5>
                                 <p class="card-text">М-200 применяется в частном строительстве. Подходит для заливки
@@ -97,21 +100,21 @@
                         </div>
                     </div>
                     <div class="row" style="justify-content: space-around; margin-top: 50px">
-                        <div class="card col-4">
+                        <div class="card col-12 col-lg-4">
                             <div class="card-body">
                                 <h5 class="card-title">Бетон М250 (В20) С16/20 П4</h5>
                                 <p class="card-text">Если строение не менее нескольких этажей - то используют минимум
                                     М-200 бетона.</p>
                             </div>
                         </div>
-                        <div class="card col-4">
+                        <div class="card col-12 col-lg-4">
                             <div class="card-body">
                                 <h5 class="card-title">Бетон М300 (В22,5) С18/22,5 П4</h5>
                                 <p class="card-text">Для заливки ригелей, колон и некоторых фундаментов используют бетон
                                     марки 300 из-за его надежности и высокого запаса прочности.</p>
                             </div>
                         </div>
-                        <div class="card col-4">
+                        <div class="card col-12 col-lg-4">
                             <div class="card-body">
                                 <h5 class="card-title">Бетон М350-М400 (B30 C20/30) П4</h5>
                                 <p class="card-text">Бункеры и поверхности требующие высокой прочности и
@@ -184,12 +187,15 @@
             <div class="container">
                 <h3 class="h3">Заказать доставку бетона по Кропивницкому</h3>
                 <div class="formka">
-                    <form action="form.php" class="col-8 form" method="get">
+                    <form action="form.php" class="col-lg-8 col-12 form" method="get">
                         <div class="form-group">
-                            <input type="text" placeholder="Ваше имя" class="form-control" name="name">
+                            <input type="text" data-validate placeholder="Ваше имя" class="form-control" name="name">
+                            <span class="some-form__hint">Обязательно для заполнения</span>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Номер телефона для связи" class="form-control" name="phone">
+                            <input type="text" data-validate placeholder="Номер телефона для связи" class="form-control"
+                                name="phone">
+                            <span class="some-form__hint">Обязательно для заполнения</span>
                         </div>
                         <div class="form-group">
                             <input type="email" placeholder="Почта" class="form-control" name="email">
@@ -198,15 +204,15 @@
                             <textarea placeholder="Дополнительная информация" class="form-control form-control-textarea"
                                 name="infa"></textarea>
                         </div>
-                        <input type="submit" class="order2">
+                        <input type="submit" class="order2 col-8 col-sm-5">
                     </form>
                 </div>
                 <div class="footerka">
-                    <div class="footer col-11">
-                        <p class="col-2">Цены</p>
-                        <p class="col-2">Марки</p>
-                        <h2 class="col-5 text-center">Concrete delivery</h2>
-                        <p class="col-3 text-right">+38 096 59 383 37</p>
+                    <div class="footer col-12 ">
+                        <a href="#price" class="col-12 col-md-2">Цены</a>
+                        <a href="#marks" class="col-12 col-md-1">Марки</a>
+                        <h2 class="col-12 col-md-6 text-center">Concrete delivery</h2>
+                        <p class="col-12 col-md-3 text-center">+38 096 59 383 37</p>
                     </div>
                     <hr>
                     <p class="col-12 text-center">© 2020</p>
@@ -214,14 +220,10 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

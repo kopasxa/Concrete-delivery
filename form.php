@@ -1,7 +1,4 @@
 <?php
-    $mysqli = new mysqli("localhost", "root", "", "concrete");
-    $mysqli->query("SET NAMES 'utf-8'");
-
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];

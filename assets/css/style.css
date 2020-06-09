@@ -9,9 +9,70 @@ body * {
   outline: none !important;
 }
 
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  z-index: 9999;
+  -webkit-transition: .5s all linear;
+  transition: .5s all linear;
+  opacity: 1;
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.preloader .loader {
+  width: 110px;
+  height: 110px;
+  border: 4px solid white;
+  border-radius: 50%;
+  border-top-color: #EF4F4F;
+  border-top-width: 5px;
+  -webkit-animation: 2s spin infinite linear;
+          animation: 2s spin infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
 header {
   margin-top: 10px;
-  height: 100%;
+  height: 110%;
 }
 
 nav {
@@ -75,7 +136,7 @@ nav {
 }
 
 .mouse {
-  margin-top: 130px;
+  margin-top: 145px;
   border: 2px solid black;
   border-radius: 17px;
   height: 50px;
@@ -156,8 +217,11 @@ nav {
   display: flex;
 }
 
+.row {
+  margin: 0;
+}
+
 .order {
-  width: 203px;
   height: 61px;
   margin-top: 20px;
   margin-left: 15px;
@@ -168,13 +232,13 @@ nav {
   border: none;
   -webkit-transition: .3s linear;
   transition: .3s linear;
-}
-
-.order a {
   font-family: Montserrat;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -188,17 +252,15 @@ nav {
 
 .order:hover {
   background: #ff0202;
+  text-decoration: none;
+  color: #FBFBFB;
 }
 
 #marks {
-  height: 100vh;
+  height: 100%;
 }
 
-.cards {
-  position: absolute;
-}
-
-.cards .col-4 {
+.cards .col-lg-4, .cards .col-12 {
   max-width: 32% !important;
 }
 
@@ -246,12 +308,11 @@ nav {
 }
 
 #price {
-  height: 100vh;
+  height: 100%;
 }
 
 .table {
   margin-top: 7%;
-  height: 80%;
   border-radius: 10px;
 }
 
@@ -272,9 +333,9 @@ nav {
 .trtop {
   font-family: Montserrat;
   font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 24px;
+  font-weight: bold  !important;
+  font-size: 20px  !important;
+  line-height: 24px !important;
 }
 
 tr, td {
@@ -287,7 +348,7 @@ tr, td {
 }
 
 #form {
-  height: 100vh;
+  height: 100%;
 }
 
 .formka {
@@ -312,10 +373,32 @@ tr, td {
   max-height: 170px;
 }
 
+.some-form__line-required .some-form__hint {
+  opacity: 1;
+  z-index: auto;
+}
+
+.some-form__hint {
+  font-family: Montserrat;
+  font-weight: bold;
+  z-index: -1;
+  opacity: 0;
+  border-radius: 10px;
+  top: 100%;
+  left: 0;
+  margin-top: -6px;
+  padding: 0 12px;
+  width: 100%;
+  color: #d30000;
+  font-size: 18px;
+  line-height: 1.333333;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
 .order2 {
   -webkit-box-shadow: 3px 5px 18px rgba(234, 13, 13, 0.63);
           box-shadow: 3px 5px 18px rgba(234, 13, 13, 0.63);
-  width: 227px;
   height: 60px;
   background-color: #EF4F4F;
   border-radius: 30px;
@@ -329,6 +412,12 @@ tr, td {
   line-height: 29px;
   color: #FBFBFB;
   text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .order2:hover {
@@ -352,16 +441,18 @@ tr, td {
   text-transform: uppercase;
 }
 
-.footer p {
+.footer a, .footer p {
   margin: auto;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
   font-family: Montserrat;
   font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  color: black;
+  text-decoration: none;
 }
 
 hr {
@@ -369,6 +460,6 @@ hr {
 }
 
 .footerka {
-  margin-top: 250px;
+  margin-top: 25%;
 }
 /*# sourceMappingURL=style.css.map */
